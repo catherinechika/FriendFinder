@@ -4,17 +4,21 @@ $(window).on("load", function () {
 
     const answers = [];
 
-    function newUserObj(name, answers) {
+    function newUserObj(name, answers, picture) {
         this.name = name,
-            this.answers = answers
+            this.answers = answers,
+            this.picture = picture
     }
     $(".submit").on("click", function (event) {
         event.preventDefault();
+
+        // ------------CREATE AN OBJECT FOR THE NEW USER
         let name = $(".userName").val()
+        let picture = $(".pic").val()
         // console.log(name)
         creatAns()
-        var newUser = new newUserObj(name, answers)
-        // ------------TO SWITCH THE HTML ON THE PAGE TO THE SUBMITTED 
+        var newUser = new newUserObj(name, answers, picture)
+        // ------------ SWITCH THE HTML ON THE PAGE TO THE BEST MATCHED CARD 
         $(".questions").hide()
         $(".submit").hide()
         // ---------------post request------------------------
@@ -27,23 +31,28 @@ $(window).on("load", function () {
         var friends = [
             {
                 name: "Lucifer",
-                answers: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+                answers: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+                picture: "https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/07/lucifer-poster.jpg?quality=90&strip=all&zoom=1&resize=644%2C383&ssl=1"
             },
             {
                 name: "Beyonce",
-                answers: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+                answers: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+                picture: "https://s1.r29static.com//bin/entry/520/720x864,85/2121135/image.webp"
             },
             {
                 name: "Sheldon",
-                answers: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+                answers: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+                picture: "https://m.media-amazon.com/images/M/MV5BZjg4MGNlZDgtMmM5OC00ZmMxLTg3Y2EtZmZjOGJlNDU4NGNhXkEyXkFqcGdeQXVyMTgxOTIzNzk@._V1_.jpg"
             },
             {
                 name: "Chika",
-                answers: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+                answers: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+                picture: "http://createmyst.com/wp-content/uploads/2016/06/Hammers_Nick_0T2A9728-450x280.jpg"
             },
             {
                 name: "Mary",
-                answers: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+                answers: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                picture: "https://i.pinimg.com/originals/46/0c/b3/460cb3f09a0fbfbf320f708cf6f9a525.jpg"
             }]
         let userArr = newUser.answers
         // console.log(userArr)
@@ -54,6 +63,7 @@ $(window).on("load", function () {
             friendArr = friends[i].answers
             matchMaker(friendArr)
         }
+        friends.push(newUser)
         // -------------------MATCHMAKER FUNCTION TO USE AS A CALL BACK---------------------------------
 
         function matchMaker(friendArr) {
@@ -82,8 +92,10 @@ $(window).on("load", function () {
         let yourFriend = Math.min.apply(null, score)
         let yourFriendIndex = score.indexOf(yourFriend)
         let friendsName = friends[yourFriendIndex].name
-
-        console.log(yourFriend, yourFriendIndex, friendsName)
+        let friendPic = friends[yourFriendIndex].picture
+        console.log(friendPic)
+        $('.friendPic').attr("src", friendPic)
+        // console.log(yourFriend, yourFriendIndex, friendsName)
 
         // -----------------TO UPDATE THE HTML WITH THE NEWLY SELECTED BEST FRIEND
         $("#matchName").text(friendsName)
