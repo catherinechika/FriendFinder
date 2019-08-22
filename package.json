@@ -1,0 +1,26 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "This app is a  compatibility-based \"FriendFinder\" application -- basically a dating app. This full-stack site takes in results from user surveys, then compare their answers with those from other users. The app then displays the name and picture of the user with the best overall match. I used Express to handle routing and  deploy the app to Heroku",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node": "^12.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catherinechika/FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catherinechika/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/catherinechika/FriendFinder#readme"
+}

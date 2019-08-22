@@ -1,0 +1,32 @@
+            <p>I love myself.</p>
+            <p>I don't trust others.</p>
+            <p>I don't believe in God.</p>
+            <p>I dont know why I do most things I do. </p>
+            <p>I look up to celebrity entertainers</p>
+            <p>I don't believe in global warming.</p>
+            <p>My perfect weekend involves a few wild nights</p>
+            <p>I care a lot about physical appearance.</p>
+            <p>I believe I am smarter than the average person.</p>
+            <h4> I have an apocalypse survival plan. </h4>
+
+
+{
+                    name: "Lucifer",
+                    answers: [1, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+                },
+                {
+                    name: "Beyonce",
+                    answers: [1, 5, 1, 5, 5, 1, 5, 5, 5, 5]
+                },
+                {
+                    name: "Sheldon",
+                    answers: [1, 5, 5, 1, 1, 1, 1, 1, 5, 5]
+                },
+                {
+                    name: "Chika",
+                    answers: [5, 1, 1, 1, 1, 4, 2, 2, 2, 1]
+                },
+                {
+                    name: "Mary",
+                    answers: [5, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+                }
