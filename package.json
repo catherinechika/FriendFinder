@@ -4,8 +4,8 @@
   "description": "This app is a  compatibility-based \"FriendFinder\" application -- basically a dating app. This full-stack site takes in results from user surveys, then compare their answers with those from other users. The app then displays the name and picture of the user with the best overall match. I used Express to handle routing and  deploy the app to Heroku",
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "node": "^12.8.1"
   },
   "devDependencies": {},
